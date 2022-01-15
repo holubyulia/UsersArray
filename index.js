@@ -1,3 +1,6 @@
+'use strict'
+
+
 function User(firstName, lastName, age, email, isMale, isSubscribe = false) {
     this.firstName = firstName;
     this.lastName = lastName;
@@ -29,12 +32,19 @@ function createRandomUser(quantity) {
 }
 
 const userArr = createRandomUser(50);
-console.table(userArr);
+// console.table(userArr);
 
 
-/* Tasks:
-1. Получить массив полных имен с помощью .map()
-2. Получить массив совершеннолетних пользователей
-3. Зарандомить подписку у пользователей
-4. Получить массив подписанных совершеннолетних пользователей женского пола, но вывести только их почту */
+//1. Получить массив полных имен с помощью .map() ???
+
+
+// 2. Получить массив совершеннолетних пользователей
+const userArrAge = userArr.filter(e => e.age >18);
+
+// 3. Зарандомить подписку у пользователей
+
+//4. Получить массив подписанных совершеннолетних пользователей женского пола, но вывести только их почту 
+
+
+
 
