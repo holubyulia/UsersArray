@@ -34,7 +34,7 @@ function createRandomUser(quantity) {
 const userArr = createRandomUser(50);
 // console.table(userArr);
 
-console.table(userArr);
+
 //1. Получить массив полных имен с помощью .map() ???
 const userArrFullName = userArr.map(userArr => userArr.getFullName());
 
@@ -44,11 +44,14 @@ const userArrAge = userArr.filter(e => e.age >18);
 
 // 3. Зарандомить подписку у пользователей
 
-userArr.forEach(userArr => userArr.isSubscribe = Math.random() > 0.5);
-
+userArr.forEach((userArr) => userArr.isSubscribe = Math.random() > 0.5);
+// console.table(userArr);
 
 //4. Получить массив подписанных совершеннолетних пользователей женского пола, но вывести только их почту 
 
 
+const userArrayAdultSubscribe = userArr.filter(userArr => {if (userArr.age >= 18 && userArr.isSubscribe === true && userArr.isMale === false){
+                return userArr.email; //не понимаю пока как оставить только имеил
+            }});
 
-
+console.table(userArrayAdultSubscribe);
